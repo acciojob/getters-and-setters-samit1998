@@ -14,24 +14,27 @@ class Person {
 
 class Student extends Person {
 	study() {
-    console.log(`${this._name} is studying`);
+    console.log(`${this.name} is studying`);
   }
 }
 
 class Teacher extends Person {
 	teach() {
-    console.log(`${this._name} is teaching`);
+    console.log(`${this.name} is teaching`);
   }
 }
-const student1 = new Student("Alice", 20);
-console.log(student1.name); // Output: "Alice"
-student1.study(); // Output: "Alice is studying"
+const person = new Person("John", 25);
+console.log(Person.name);
+person.age = 30;
 
-const teacher1 = new Teacher("Bob", 35);
-teacher1.teach(); // Output: "Bob is teaching"
+ const student = new Student("Alice", 30);
+console.log(student.name);
+student.study();
 
-// Changing age using the setter
-teacher1.age = 40;
+ const teacher = new Teacher("Alice", 30);
+console.log(teacher.name);
+teacher.teach();
+
 
 // Do not change the code below this line
 window.Person = Person;
